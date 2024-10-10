@@ -1,6 +1,10 @@
-// app.js
+import { autoLogin, getUID } from './utils/permission'
+import promisePolyfill from './utils/promise-polyfill' // 添加 promise.finally
+
 App({
   onLaunch() {
+    // 自动登录
+    autoLogin()
   },
   /**
    * 设置用户信息

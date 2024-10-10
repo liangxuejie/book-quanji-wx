@@ -12,7 +12,6 @@ Page({
         countriesShow: false,
         phoneNumber: '',
         vrcode: '',
-        needReturn: false,
     },
     onLoad: function (options) {
         // wx.showModal({
@@ -71,6 +70,8 @@ Page({
           } else {
             wx.switchTab({ url: '/pages/home/home' })
           }
+          // wx.hideToast()
+        }).finally(() => {
           wx.hideToast()
         })
     }
